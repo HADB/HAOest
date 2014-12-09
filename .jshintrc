@@ -13,7 +13,7 @@
     "immed": true,
     "noarg": true,
     "trailing": true,
-	"strict": true,
+    "strict": true,
 
     "devel": true,
     "node": true,
