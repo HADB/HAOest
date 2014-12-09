@@ -1,5 +1,6 @@
 module.exports = function (grunt) {
-    // Project configuration.
+    'use strict';
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         concat: {
@@ -7,7 +8,7 @@ module.exports = function (grunt) {
                 separator: ';',
             },
             dist: {
-                src: ['src/screenfull.js', 'src/project.js', 'src/outro.js'],
+                src: ['src/core.js', 'src/screenfull.js'],
                 dest: 'dist/haoest.js',
             },
         },
@@ -25,13 +26,12 @@ module.exports = function (grunt) {
             options: {
                 jshintrc: '.jshintrc'
             },
-        },
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 };
