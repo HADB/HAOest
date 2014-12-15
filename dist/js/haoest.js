@@ -1,9 +1,11 @@
-/* ========================================================================
- * HAOest
- * http://hadb.github.io/HAOest
- * ========================================================================
- * Copyright 2014 HADB.
+/*
+ * HAOest v0.1.0 (https://github.com/HADB/HAOest)
+ * Copyright 2014-2014 HADB <hadb@haoest.com>
  * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
+ */
+
+/* ========================================================================
+ * HAOest: core.js
  * ========================================================================*/
 
 (function (Global) {
@@ -18,10 +20,6 @@
 
 /* ========================================================================
  * HAOest: mobile.js
- * http://hadb.github.io/HAOest
- * ========================================================================
- * Copyright 2014 HADB.
- * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
  * ========================================================================*/
 
 (function (HAOest) {
@@ -76,11 +74,6 @@
 
 /* ========================================================================
  * HAOest: fullscreen.js
- * http://hadb.github.io/HAOest
- * ========================================================================
- * Copyright 2014 HADB.
- * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
- * ========================================================================
  * Reference https://github.com/sindresorhus/screenfull.js
  * MIT © Sindre Sorhus(http://sindresorhus.com/)
  * ========================================================================*/

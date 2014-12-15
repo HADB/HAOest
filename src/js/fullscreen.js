@@ -1,10 +1,5 @@
 /* ========================================================================
  * HAOest: fullscreen.js
- * http://hadb.github.io/HAOest
- * ========================================================================
- * Copyright 2014 HADB.
- * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
- * ========================================================================
  * Reference https://github.com/sindresorhus/screenfull.js
  * MIT © Sindre Sorhus(http://sindresorhus.com/)
  * ========================================================================*/

@@ -1,9 +1,5 @@
 /* ========================================================================
- * HAOest
- * http://hadb.github.io/HAOest
- * ========================================================================
- * Copyright 2014 HADB.
- * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
+ * HAOest: core.js
  * ========================================================================*/
 
 (function (Global) {
