@@ -1,3 +1,11 @@
+/* ========================================================================
+ * HAOest
+ * http://hadb.github.io/HAOest
+ * ========================================================================
+ * Copyright 2014 HADB.
+ * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
+ * ========================================================================*/
+
 module.exports = function (grunt) {
     'use strict';
 
@@ -5,16 +13,24 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             options: {
-                separator: ';',
+
             },
             dist: {
-                src: ['src/core.js', 'src/screenfull.js'],
+                src: [
+                    'src/js/core.js',
+                    'src/js/mobile.js',
+                    'src/js/fullscreen.js'
+                ],
                 dest: 'dist/haoest.js',
             },
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '/*!\n' +
+                        ' * HAOest v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+                        ' * Copyright 2014-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+                        ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+                        ' */\n',
             },
             build: {
                 src: 'dist/haoest.js',
@@ -22,7 +38,10 @@ module.exports = function (grunt) {
             }
         },
         jshint: {
-            files: ['gruntfile.js', 'src/*.js'],
+            files: [
+                'gruntfile.js',
+                'src/js/*.js'
+            ],
             options: {
                 jshintrc: '.jshintrc'
             },

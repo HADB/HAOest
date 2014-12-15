@@ -1,7 +1,17 @@
+/* ========================================================================
+ * HAOest: fullscreen.js
+ * http://hadb.github.io/HAOest
+ * ========================================================================
+ * Copyright 2014 HADB.
+ * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
+ * ========================================================================
+ * Reference https://github.com/sindresorhus/screenfull.js
+ * MIT © Sindre Sorhus(http://sindresorhus.com/)
+ * ========================================================================*/
+
 (function (HAOest) {
     'use strict';
 
-    var isCommonjs = typeof module !== 'undefined' && module.exports;
     var keyboardAllowed = typeof Element !== 'undefined' && 'ALLOW_KEYBOARD_INPUT' in Element;
 
     var fn = (function () {
@@ -72,7 +82,7 @@
         return false;
     })();
 
-    var screenfull = {
+    var fullscreen = {
         request: function (elem) {
             var request = fn.requestFullscreen;
 
@@ -104,16 +114,11 @@
     };
 
     if (!fn) {
-        if (isCommonjs) {
-            module.exports = false;
-        } else {
-            window.screenfull = false;
-        }
-
+        window.fullscreen = false;
         return;
     }
 
-    Object.defineProperties(screenfull, {
+    Object.defineProperties(fullscreen, {
         isFullscreen: {
             get: function () {
                 return !!document[fn.fullscreenElement];
@@ -135,16 +140,12 @@
     });
 
     document.addEventListener(fn.fullscreenchange, function (e) {
-        screenfull.onchange.call(screenfull, e);
+        fullscreen.onchange.call(fullscreen, e);
     });
 
     document.addEventListener(fn.fullscreenerror, function (e) {
-        screenfull.onerror.call(screenfull, e);
+        fullscreen.onerror.call(fullscreen, e);
     });
 
-    if (isCommonjs) {
-        module.exports = screenfull;
-    } else {
-        window.screenfull = screenfull;
-    }
-}(this.HAOest));
+    HAOest.fullscreen = fullscreen;
+}(HAOest));
