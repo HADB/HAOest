@@ -27,14 +27,16 @@
 
 /* floating tag */
 .ani-tagFloatingLeft {
-    transform-origin: center center;
+    -webkit-transform-origin: center center;
     -webkit-animation: tagFloatingLeft 5s linear infinite both;
+    transform-origin: center center;
     animation: tagFloatingLeft 5s linear infinite both;
 }
 
 .ani-tagFloatingRight {
-    transform-origin: center center;
+    -webkit-transform-origin: center center;
     -webkit-animation: tagFloatingRight 5s linear infinite both;
+    transform-origin: center center;
     animation: tagFloatingRight 5s linear infinite both;
 }
 
