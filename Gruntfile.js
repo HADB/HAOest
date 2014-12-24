@@ -31,7 +31,7 @@ module.exports = function (grunt) {
             js: {
                 src: [
                     'src/js/core.js',
-                    'src/js/mobile.js',
+                    'src/js/browser.js',
                     'src/js/fullscreen.js'
                 ],
                 dest: 'dist/js/haoest.js'
