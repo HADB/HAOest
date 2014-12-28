@@ -1,5 +1,5 @@
 /*
- * HAOest v0.1.2 (https://github.com/HADB/HAOest)
+ * HAOest v0.1.3 (https://github.com/HADB/HAOest)
  * Copyright 2014-2014 HADB <hadb@haoest.com>
  * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
  */
@@ -33,14 +33,16 @@
 
 /* floating tag */
 .ani-tagFloatingLeft {
-    transform-origin: center center;
+    -webkit-transform-origin: center center;
     -webkit-animation: tagFloatingLeft 5s linear infinite both;
+    transform-origin: center center;
     animation: tagFloatingLeft 5s linear infinite both;
 }
 
 .ani-tagFloatingRight {
-    transform-origin: center center;
+    -webkit-transform-origin: center center;
     -webkit-animation: tagFloatingRight 5s linear infinite both;
+    transform-origin: center center;
     animation: tagFloatingRight 5s linear infinite both;
 }
 
@@ -132,6 +134,11 @@
 .ani-moveUpDownSpring {
     -webkit-animation: moveUpDownSpring ease-in-out 1.2s both;
     animation: moveUpDownSpring ease-in-out 1.2s both;
+}
+
+.ani-moveDownUpSpring {
+    -webkit-animation: moveDownUpSpring ease-in-out 1.2s both;
+    animation: moveDownUpSpring ease-in-out 1.2s both;
 }
 
 .ani-moveLeftRightSpring {
@@ -955,6 +962,73 @@
     65% {
         -webkit-transform: translateY(-13%);
         transform: translateY(-13%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes moveDownUpSpring {
+    0% {
+        -webkit-transform: translateY(-100%);
+        -webkit-opacity: 0;
+    }
+
+    5% {
+        -webkit-transform: translateY(-80%);
+        -webkit-opacity: 0.3;
+    }
+
+    35% {
+        -webkit-transform: translateY(10%);
+        -webkit-opacity: 1;
+    }
+
+    60% {
+        -webkit-transform: translateY(-13%);
+    }
+
+    65% {
+        -webkit-transform: translateY(-13%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@keyframes moveDownUpSpring {
+    0% {
+        -webkit-transform: translateY(100%);
+        -webkit-opacity: 0;
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    5% {
+        -webkit-transform: translateY(80%);
+        -webkit-opacity: 0.3;
+        transform: translateY(80%);
+        opacity: 0.3;
+    }
+
+    35% {
+        -webkit-transform: translateY(-10%);
+        -webkit-opacity: 1;
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+
+    60% {
+        -webkit-transform: translateY(13%);
+        transform: translateY(13%);
+    }
+
+    65% {
+        -webkit-transform: translateY(13%);
+        transform: translateY(13%);
     }
 
     100% {

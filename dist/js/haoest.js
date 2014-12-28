@@ -1,5 +1,5 @@
 /*
- * HAOest v0.1.2 (https://github.com/HADB/HAOest)
+ * HAOest v0.1.3 (https://github.com/HADB/HAOest)
  * Copyright 2014-2014 HADB <hadb@haoest.com>
  * Licensed under MIT (https://github.com/HADB/HAOest/blob/master/LICENSE)
  */
