@@ -188,6 +188,18 @@
     animation: scaleDownCenter .7s ease both;
 }
 
+.ani-flipInY {
+    backface-visibility: visible !important;
+    -webkit-animation: flipInY .5s ease both;
+    animation: flipInY .5s ease both;
+}
+
+.ani-flipOutY {
+    backface-visibility: visible !important;
+    -webkit-animation: flipOutY .5s ease both;
+    animation: flipOutY .5s ease both;
+}
+
 /* animation duration */
 .ani-duration100 {
     -webkit-animation-duration: .1s;
@@ -1512,5 +1524,49 @@
         opacity: 0;
         -webkit-transform: rotate(-360deg) scale(0);
         transform: rotate(-360deg) scale(0);
+    }
+}
+
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+@keyframes flipInY {
+    0% {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+@-webkit-keyframes flipOutY {
+    0% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+    }
+}
+
+@keyframes flipOutY {
+    0% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg);
     }
 }
